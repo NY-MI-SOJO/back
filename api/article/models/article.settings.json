@@ -29,6 +29,30 @@
     },
     "Image": {
       "type": "string"
+    },
+    "isHero": {
+      "type": "boolean",
+      "default": false
+    },
+    "articleOrientation": {
+      "type": "enumeration",
+      "enum": [
+        "Vertical",
+        "Horizontal"
+      ],
+      "default": "Vertical",
+      "required": false
+    },
+    "imageDescription": {
+      "type": "string"
+    },
+    "imgOrientation": {
+      "type": "enumeration",
+      "enum": [
+        "Top",
+        "Right"
+      ],
+      "default": "Top"
     }
   }
 }

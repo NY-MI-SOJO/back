@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "02/19/2021 12:40:49 PM"
+    "x-generation-date": "02/25/2021 5:46:48 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3780,6 +3780,29 @@
           "Image": {
             "type": "string"
           },
+          "isHero": {
+            "type": "boolean",
+            "default": false
+          },
+          "articleOrientation": {
+            "type": "string",
+            "default": "Vertical",
+            "enum": [
+              "Vertical",
+              "Horizontal"
+            ]
+          },
+          "imageDescription": {
+            "type": "string"
+          },
+          "imgOrientation": {
+            "type": "string",
+            "default": "Top",
+            "enum": [
+              "Top",
+              "Right"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -3808,6 +3831,29 @@
           },
           "Image": {
             "type": "string"
+          },
+          "isHero": {
+            "type": "boolean",
+            "default": false
+          },
+          "articleOrientation": {
+            "type": "string",
+            "default": "Vertical",
+            "enum": [
+              "Vertical",
+              "Horizontal"
+            ]
+          },
+          "imageDescription": {
+            "type": "string"
+          },
+          "imgOrientation": {
+            "type": "string",
+            "default": "Top",
+            "enum": [
+              "Top",
+              "Right"
+            ]
           },
           "published_at": {
             "type": "string",
@@ -3861,6 +3907,18 @@
                   "type": "string"
                 },
                 "Image": {
+                  "type": "string"
+                },
+                "isHero": {
+                  "type": "boolean"
+                },
+                "articleOrientation": {
+                  "type": "string"
+                },
+                "imageDescription": {
+                  "type": "string"
+                },
+                "imgOrientation": {
                   "type": "string"
                 },
                 "published_at": {

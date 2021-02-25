@@ -556,6 +556,18 @@
                 "Image": {
                   "type": "string"
                 },
+                "isHero": {
+                  "type": "boolean"
+                },
+                "articleOrientation": {
+                  "type": "string"
+                },
+                "imageDescription": {
+                  "type": "string"
+                },
+                "imgOrientation": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

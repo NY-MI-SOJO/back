@@ -568,6 +568,29 @@
           "Image": {
             "type": "string"
           },
+          "isHero": {
+            "type": "boolean",
+            "default": false
+          },
+          "articleOrientation": {
+            "type": "string",
+            "default": "Vertical",
+            "enum": [
+              "Vertical",
+              "Horizontal"
+            ]
+          },
+          "imageDescription": {
+            "type": "string"
+          },
+          "imgOrientation": {
+            "type": "string",
+            "default": "Top",
+            "enum": [
+              "Top",
+              "Right"
+            ]
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -596,6 +619,29 @@
           },
           "Image": {
             "type": "string"
+          },
+          "isHero": {
+            "type": "boolean",
+            "default": false
+          },
+          "articleOrientation": {
+            "type": "string",
+            "default": "Vertical",
+            "enum": [
+              "Vertical",
+              "Horizontal"
+            ]
+          },
+          "imageDescription": {
+            "type": "string"
+          },
+          "imgOrientation": {
+            "type": "string",
+            "default": "Top",
+            "enum": [
+              "Top",
+              "Right"
+            ]
           },
           "published_at": {
             "type": "string",
