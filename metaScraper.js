@@ -22,9 +22,9 @@ const metaScraper = async (uri) => {
     metaElements = [...metaElements].reduce((store, element)=>{ // only map meta tags that have a name and content
         const name = element?.attribs?.property ?? 'NA';
         const content = element?.attribs?.content ?? 'NA';
-        if (name != 'NA' && content != 'NA') store.push([name, content])
+        if (name != 'NA' && content != 'NA') store[name] = content
         return store;
-    },[]);
+    }, {});
     return metaElements;
 }
 

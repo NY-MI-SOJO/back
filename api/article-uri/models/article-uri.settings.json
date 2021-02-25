@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "tags",
+  "collectionName": "article_uris",
   "info": {
-    "name": "Tag"
+    "name": "ArticleURI"
   },
   "options": {
     "increments": true,
@@ -10,13 +10,8 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Name": {
+    "URI": {
       "type": "string"
-    },
-    "articles": {
-      "via": "tags",
-      "collection": "article",
-      "dominant": true
     }
   }
 }
