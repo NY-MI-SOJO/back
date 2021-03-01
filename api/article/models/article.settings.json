@@ -2,8 +2,7 @@
   "kind": "collectionType",
   "collectionName": "articles",
   "info": {
-    "name": "Article",
-    "description": ""
+    "name": "Article"
   },
   "options": {
     "increments": true,
@@ -15,14 +14,12 @@
       "type": "string"
     },
     "Description": {
-      "type": "richtext"
-    },
-    "URI": {
       "type": "string"
     },
-    "tags": {
-      "collection": "tag",
-      "via": "articles"
+    "URI": {
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "Source": {
       "type": "string"
@@ -40,19 +37,14 @@
         "Vertical",
         "Horizontal"
       ],
-      "default": "Vertical",
-      "required": false
+      "default": "Vertical"
     },
     "imageDescription": {
       "type": "string"
     },
-    "imgOrientation": {
-      "type": "enumeration",
-      "enum": [
-        "Top",
-        "Right"
-      ],
-      "default": "Top"
+    "tags": {
+      "via": "articles",
+      "collection": "tag"
     }
   }
 }
