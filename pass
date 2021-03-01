@@ -1,2 +1,0 @@
-
-mongodb://strapi:VGDV4EFiYLzPIymC@cluster0-shard-00-00.vu1o6.mongodb.net:27017,cluster0-shard-00-01.vu1o6.mongodb.net:27017,cluster0-shard-00-02.vu1o6.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-89zpea-shard-0&authSource=admin&retryWrites=true&w=majority
