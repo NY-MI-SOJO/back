@@ -2,16 +2,19 @@
   "kind": "collectionType",
   "collectionName": "article_uris",
   "info": {
-    "name": "ArticleURI"
+    "name": "ArticleURI",
+    "description": ""
   },
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "URI": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

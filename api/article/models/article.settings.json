@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "articles",
   "info": {
-    "name": "Article"
+    "name": "Article",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -43,8 +44,8 @@
       "type": "string"
     },
     "tags": {
-      "via": "articles",
-      "collection": "tag"
+      "collection": "tag",
+      "via": "articles"
     }
   }
 }
