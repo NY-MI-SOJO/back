@@ -44,8 +44,8 @@
       "type": "string"
     },
     "tags": {
-      "collection": "tag",
-      "via": "articles"
+      "via": "articles",
+      "collection": "tag"
     }
   }
 }
