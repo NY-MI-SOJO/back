@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "name": "aboutPage",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Page": {
+      "type": "dynamiczone",
+      "components": [
+        "section.section"
+      ]
+    }
+  }
+}

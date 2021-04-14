@@ -11,7 +11,7 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "URI": {
+    "data_url": {
       "type": "string",
       "required": true,
       "unique": true

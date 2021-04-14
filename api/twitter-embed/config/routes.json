@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/twitter-embed",
+      "handler": "twitter-embed.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/twitter-embed",
+      "handler": "twitter-embed.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/twitter-embed",
+      "handler": "twitter-embed.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

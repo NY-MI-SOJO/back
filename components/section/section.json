@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_section_sections",
+  "info": {
+    "name": "section",
+    "icon": "align-justify"
+  },
+  "options": {},
+  "attributes": {
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}

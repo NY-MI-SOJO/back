@@ -1,12 +1,12 @@
 {
   "paths": {
-    "/article-uris": {
+    "/twitter-embed": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the twitter-embed's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve twitter-embed document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -52,7 +52,7 @@
         },
         "summary": "",
         "tags": [
-          "Article-uri"
+          "Twitter-embed"
         ],
         "parameters": [
           {
@@ -193,202 +193,12 @@
           }
         ]
       },
-      "post": {
-        "deprecated": false,
-        "description": "Create a new record",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Article-uri"
-        ],
-        "requestBody": {
-          "description": "",
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewArticle-uri"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/article-uris/count": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Article-uri"
-        ],
-        "parameters": []
-      }
-    },
-    "/article-uris/{id}": {
-      "get": {
-        "deprecated": false,
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "unexpected error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          }
-        },
-        "summary": "",
-        "tags": [
-          "Article-uri"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
-      },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single twitter-embed record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve twitter-embed document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -434,7 +244,7 @@
         },
         "summary": "",
         "tags": [
-          "Article-uri"
+          "Twitter-embed"
         ],
         "requestBody": {
           "description": "",
@@ -442,30 +252,19 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewArticle-uri"
+                "$ref": "#/components/schemas/NewTwitter-embed"
               }
             }
           }
         },
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single twitter-embed record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single twitter-embed based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,46 +307,53 @@
         },
         "summary": "",
         "tags": [
-          "Article-uri"
+          "Twitter-embed"
         ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "",
-            "deprecated": false,
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ]
+        "parameters": []
       }
     }
   },
   "components": {
     "schemas": {
-      "Article-uri": {
+      "Twitter-embed": {
         "required": [
           "id",
-          "data_url"
+          "url",
+          "visible"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "data_url": {
+          "url": {
             "type": "string"
+          },
+          "visible": {
+            "type": "boolean",
+            "default": true
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewArticle-uri": {
+      "NewTwitter-embed": {
         "required": [
-          "data_url"
+          "url",
+          "visible"
         ],
         "properties": {
-          "data_url": {
+          "url": {
             "type": "string"
+          },
+          "visible": {
+            "type": "boolean",
+            "default": true
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"

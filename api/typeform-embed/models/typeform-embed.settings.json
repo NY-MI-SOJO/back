@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "typeform_embeds",
+  "info": {
+    "name": "typeformEmbed"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "data_url": {
+      "type": "string",
+      "required": true
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}

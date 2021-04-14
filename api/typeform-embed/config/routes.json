@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/typeform-embed",
+      "handler": "typeform-embed.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/typeform-embed",
+      "handler": "typeform-embed.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/typeform-embed",
+      "handler": "typeform-embed.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "twitterEmbed",
+  "info": {
+    "name": "twitterEmbed",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "visible": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    }
+  }
+}
