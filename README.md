@@ -29,7 +29,7 @@ yarn develop
 
 # Learn More
 
-# Architecture
+## Architecture
 The image below illustrates what technologies work together in harmony to provide a platform for solutions journalism content @ [NYMIsojo.com](https://nymisojo.com). 
 
 ![NY & MI SOJO Architecture](/gitAssets/architecture.jpg)
