@@ -1,8 +1,8 @@
 {
-  "name": "my-project",
+  "name": "nymisojo-back",
   "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
+  "version": "2.0",
+  
   "scripts": {
     "develop": "strapi develop",
     "start": "strapi start",
@@ -25,9 +25,11 @@
     "strapi-plugin-users-permissions": "3.5.2",
     "strapi-utils": "3.5.2"
   },
-  "author": {
-    "name": "A Strapi developer"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NY-MI-SOJO/front-2.git"
   },
+  "author": "Adit Garg <adit.garg21k@gmail.com> (http://aditgarg.me/)",
   "strapi": {
     "uuid": "a015e010-6144-4ef3-aadc-af53ec24412e"
   },
