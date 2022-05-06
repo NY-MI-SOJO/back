@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "name": "Events",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "StartDateTime": {
+      "type": "datetime"
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string"
+    },
+    "EndDateTime": {
+      "type": "datetime"
+    },
+    "EventURL": {
+      "type": "string"
+    }
+  }
+}

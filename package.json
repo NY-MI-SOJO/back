@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "author": "Adit Garg <adit.garg21k@gmail.com> (http://aditgarg.me/)",
   "scripts": {
-    "develop": "strapi develop",
+    "dev": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"

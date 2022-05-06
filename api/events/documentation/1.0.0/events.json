@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/tags": {
+    "/events": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the events's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Tag"
+                    "$ref": "#/components/schemas/Events"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Events"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new events record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tag"
+                  "$ref": "#/components/schemas/Events"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Events"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTag"
+                "$ref": "#/components/schemas/NewEvents"
               }
             }
           }
         }
       }
     },
-    "/tags/count": {
+    "/events/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of events documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Events"
         ],
         "parameters": []
       }
     },
-    "/tags/{id}": {
+    "/events/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one events record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tag"
+                  "$ref": "#/components/schemas/Events"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Events"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single events record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve events document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tag"
+                  "$ref": "#/components/schemas/Events"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Events"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTag"
+                "$ref": "#/components/schemas/NewEvents"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single events record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single events based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Events"
         ],
         "parameters": [
           {
@@ -514,98 +514,31 @@
   },
   "components": {
     "schemas": {
-      "Tag": {
+      "Events": {
         "required": [
-          "id"
+          "id",
+          "Name"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
+          "StartDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
           "Name": {
             "type": "string"
           },
-          "articles": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "URI"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Title": {
-                  "type": "string"
-                },
-                "Description": {
-                  "type": "string"
-                },
-                "URI": {
-                  "type": "string"
-                },
-                "Source": {
-                  "type": "string"
-                },
-                "Image": {
-                  "type": "string"
-                },
-                "isHero": {
-                  "type": "boolean"
-                },
-                "articleOrientation": {
-                  "type": "string",
-                  "enum": [
-                    "Vertical",
-                    "Horizontal"
-                  ]
-                },
-                "imageDescription": {
-                  "type": "string"
-                },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
+          "Description": {
+            "type": "string"
           },
-          "Order": {
-            "type": "integer"
+          "EndDateTime": {
+            "type": "string",
+            "format": "date-time"
           },
-          "video": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "EmbedVideo": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
+          "EventURL": {
+            "type": "string"
           },
           "published_at": {
             "type": "string",
@@ -613,21 +546,26 @@
           }
         }
       },
-      "NewTag": {
+      "NewEvents": {
+        "required": [
+          "Name"
+        ],
         "properties": {
+          "StartDateTime": {
+            "type": "string",
+            "format": "date-time"
+          },
           "Name": {
             "type": "string"
           },
-          "articles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "Description": {
+            "type": "string"
           },
-          "Order": {
-            "type": "integer"
+          "EndDateTime": {
+            "type": "string",
+            "format": "date-time"
           },
-          "video": {
+          "EventURL": {
             "type": "string"
           },
           "published_at": {
@@ -646,7 +584,7 @@
   },
   "tags": [
     {
-      "name": "Tag"
+      "name": "Events"
     }
   ]
 }

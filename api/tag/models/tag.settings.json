@@ -23,6 +23,9 @@
       "unique": true,
       "min": 1,
       "type": "integer"
+    },
+    "video": {
+      "model": "videos"
     }
   }
 }

@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "main_page_carousels",
+  "info": {
+    "name": "MainPageCarousel",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Slides": {
+      "type": "dynamiczone",
+      "components": [
+        "slide.carousel-slide"
+      ]
+    }
+  }
+}

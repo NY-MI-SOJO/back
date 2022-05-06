@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_slide_carousel_slides",
+  "info": {
+    "name": "carouselSlide",
+    "icon": "image",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "URL": {
+      "type": "string",
+      "private": false
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

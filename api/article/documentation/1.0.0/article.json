@@ -575,6 +575,9 @@
                 "Order": {
                   "type": "integer"
                 },
+                "video": {
+                  "type": "string"
+                },
                 "published_at": {
                   "type": "string"
                 },

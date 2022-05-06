@@ -1,18 +1,18 @@
 {
   "paths": {
-    "/tags": {
+    "/videos": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the videos's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve videos document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Tag"
+                    "$ref": "#/components/schemas/Videos"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Videos"
         ],
         "parameters": [
           {
@@ -194,14 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new videos record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve videos document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tag"
+                  "$ref": "#/components/schemas/Videos"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Videos"
         ],
         "requestBody": {
           "description": "",
@@ -247,20 +247,20 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTag"
+                "$ref": "#/components/schemas/NewVideos"
               }
             }
           }
         }
       }
     },
-    "/tags/count": {
+    "/videos/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of videos documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve videos document(s)",
             "content": {
               "application/json": {
                 "schema": {
@@ -306,22 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Videos"
         ],
         "parameters": []
       }
     },
-    "/tags/{id}": {
+    "/videos/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one videos record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve videos document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tag"
+                  "$ref": "#/components/schemas/Videos"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Videos"
         ],
         "parameters": [
           {
@@ -376,14 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single videos record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve videos document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Tag"
+                  "$ref": "#/components/schemas/Videos"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Videos"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewTag"
+                "$ref": "#/components/schemas/NewVideos"
               }
             }
           }
@@ -449,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single videos record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single videos based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Tag"
+          "Videos"
         ],
         "parameters": [
           {
@@ -514,7 +514,7 @@
   },
   "components": {
     "schemas": {
-      "Tag": {
+      "Videos": {
         "required": [
           "id"
         ],
@@ -522,90 +522,8 @@
           "id": {
             "type": "string"
           },
-          "Name": {
+          "EmbedVideo": {
             "type": "string"
-          },
-          "articles": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "URI"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "Title": {
-                  "type": "string"
-                },
-                "Description": {
-                  "type": "string"
-                },
-                "URI": {
-                  "type": "string"
-                },
-                "Source": {
-                  "type": "string"
-                },
-                "Image": {
-                  "type": "string"
-                },
-                "isHero": {
-                  "type": "boolean"
-                },
-                "articleOrientation": {
-                  "type": "string",
-                  "enum": [
-                    "Vertical",
-                    "Horizontal"
-                  ]
-                },
-                "imageDescription": {
-                  "type": "string"
-                },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "Order": {
-            "type": "integer"
-          },
-          "video": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "EmbedVideo": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
           },
           "published_at": {
             "type": "string",
@@ -613,21 +531,9 @@
           }
         }
       },
-      "NewTag": {
+      "NewVideos": {
         "properties": {
-          "Name": {
-            "type": "string"
-          },
-          "articles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "Order": {
-            "type": "integer"
-          },
-          "video": {
+          "EmbedVideo": {
             "type": "string"
           },
           "published_at": {
@@ -646,7 +552,7 @@
   },
   "tags": [
     {
-      "name": "Tag"
+      "name": "Videos"
     }
   ]
 }
