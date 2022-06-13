@@ -11,7 +11,7 @@
       "type": "string",
       "private": false
     },
-    "image": {
+    "Media": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -21,6 +21,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "slide_overlay_title": {
+      "type": "string"
     }
   }
 }

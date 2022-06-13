@@ -596,6 +596,9 @@
               "EmbedVideo": {
                 "type": "string"
               },
+              "Name": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },

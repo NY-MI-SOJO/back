@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "05/05/2022 3:43:46 PM"
+    "x-generation-date": "06/13/2022 6:35:54 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -7032,7 +7032,7 @@
                     "URL": {
                       "type": "string"
                     },
-                    "image": {
+                    "Media": {
                       "required": [
                         "id",
                         "name",
@@ -7098,6 +7098,9 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "slide_overlay_title": {
+                      "type": "string"
                     }
                   },
                   "required": [
@@ -7133,7 +7136,7 @@
                     "URL": {
                       "type": "string"
                     },
-                    "image": {
+                    "Media": {
                       "required": [
                         "id",
                         "name",
@@ -7199,6 +7202,9 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "slide_overlay_title": {
+                      "type": "string"
                     }
                   },
                   "required": [
@@ -7300,6 +7306,9 @@
                 "type": "string"
               },
               "EmbedVideo": {
+                "type": "string"
+              },
+              "Name": {
                 "type": "string"
               },
               "published_at": {
@@ -7455,6 +7464,9 @@
           "EmbedVideo": {
             "type": "string"
           },
+          "Name": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -7464,6 +7476,9 @@
       "NewVideos": {
         "properties": {
           "EmbedVideo": {
+            "type": "string"
+          },
+          "Name": {
             "type": "string"
           },
           "published_at": {

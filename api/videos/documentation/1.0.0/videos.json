@@ -525,6 +525,9 @@
           "EmbedVideo": {
             "type": "string"
           },
+          "Name": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -534,6 +537,9 @@
       "NewVideos": {
         "properties": {
           "EmbedVideo": {
+            "type": "string"
+          },
+          "Name": {
             "type": "string"
           },
           "published_at": {

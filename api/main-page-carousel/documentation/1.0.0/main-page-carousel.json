@@ -341,7 +341,7 @@
                     "URL": {
                       "type": "string"
                     },
-                    "image": {
+                    "Media": {
                       "required": [
                         "id",
                         "name",
@@ -407,6 +407,9 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "slide_overlay_title": {
+                      "type": "string"
                     }
                   },
                   "required": [
@@ -442,7 +445,7 @@
                     "URL": {
                       "type": "string"
                     },
-                    "image": {
+                    "Media": {
                       "required": [
                         "id",
                         "name",
@@ -508,6 +511,9 @@
                           "type": "string"
                         }
                       }
+                    },
+                    "slide_overlay_title": {
+                      "type": "string"
                     }
                   },
                   "required": [
